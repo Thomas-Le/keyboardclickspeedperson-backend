@@ -1,6 +1,6 @@
 import express from 'express';
 import session, { Store } from 'express-session';
-import { SESSION_OPTIONS } from './config';
+import { CORS_ORIGIN, SESSION_OPTIONS } from './config';
 import { internalServerError, notFoundError } from './middleware';
 import { home, login, register, score } from './routes';
 import cors from 'cors';
@@ -11,7 +11,7 @@ export const createApp = (store: Store) => {
     app.use(express.json());
 
     app.use(cors({
-        origin: "http://localhost:3000",
+        origin: CORS_ORIGIN,
         credentials: true
     }));
 
