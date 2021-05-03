@@ -19,7 +19,12 @@ router.post('/score', auth, catchAsync(async (req, res) => {
     res.json({ message: 'OK' });
 }));
 
-router.get('/score', catchAsync(async (_req, res) => {
+router.get('/score', auth, catchAsync(async (req, res) => {
+    const user = await Users.findOne({ where: { id: req.session.userId } });
+    res.json({ userHighscore: user?.highscore });
+}));
+
+router.get('/highscore', catchAsync(async (_req, res) => {
     const topScores = await Users.createQueryBuilder()
         .select("username AS user, highscore AS score")
         .orderBy('highscore', 'DESC')
