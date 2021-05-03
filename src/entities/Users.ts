@@ -15,6 +15,6 @@ export class Users extends BaseEntity {
     @Column()
     hashedPassword: string;
 
-    @Column()
+    @Column({ default: 0 })
     highscore: number;
 }
