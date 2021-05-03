@@ -25,10 +25,9 @@ router.post('/register', guest, catchAsync(async (req, res) => {
             console.log(err);
         }
         const user = await Users.createQueryBuilder().insert().values({ email: email, username: username, hashedPassword: hash }).execute();
-        logIn(req, user.identifiers[0].id);
+        logIn(req, user.identifiers[0].id.toString());
+        res.json({ message: 'OK' });
     });
-
-    res.json({ message: 'OK' });
 }));
 
 export default router;
