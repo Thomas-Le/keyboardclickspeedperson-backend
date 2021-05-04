@@ -15,7 +15,7 @@ export const SESSION_OPTIONS: SessionOptions = {
     cookie: {
         maxAge: +SESSION_IDLE_TIMEOUT,
         secure: PROD,
-        sameSite: true
+        sameSite: 'none'
     },
     rolling: true,
     resave: false,

@@ -1,6 +1,6 @@
 import express from 'express';
 import session, { Store } from 'express-session';
-import { CORS_ORIGIN, SESSION_OPTIONS } from './config';
+import { CORS_ORIGIN, PROD, SESSION_OPTIONS } from './config';
 import { internalServerError, notFoundError } from './middleware';
 import { home, login, register, score } from './routes';
 import cors from 'cors';
@@ -9,6 +9,10 @@ export const createApp = (store: Store) => {
     const app = express();
 
     app.use(express.json());
+
+    if (PROD) {
+        app.set('trust proxy', 1);
+    }
 
     app.use(cors({
         origin: CORS_ORIGIN,
