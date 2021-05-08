@@ -31,7 +31,7 @@ const main = async () => {
         "According to Hebrew legend, Noah prayed to God for help protecting all the food he stored on the ark from being eaten by rats. In reply, God made the lion sneeze, and out popped a cat.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus quis erat quis dignissim. Cras laoreet, ex pulvinar dapibus tristique, ex leo suscipit tellus, non aliquam sapien urna tempor arcu.",
         'A duck walked up to a lemonade stand And he said to the man, running the stand "Hey! (Bum bum bum) Got any grapes?" The man said "No we just sell lemonade. But it\'s cold And it\'s fresh And it\'s all home-made.',
-        "A cat rubs against people not only to be affectionate but also to mark out its territory with scent glands around its face. The tail area and paws also carry the cat’s scent.",
+        "A cat rubs against people not only to be affectionate but also to mark out its territory with scent glands around its face. The tail area and paws also carry the cat's scent.",
         "architecture consideration fill element loyalty reduction drug corn dramatic bracket fine grateful cute failure just scandal theater bloody auction pier original fare"
     ]
     let roomOwners = new Set(); // string (owner socket id)
