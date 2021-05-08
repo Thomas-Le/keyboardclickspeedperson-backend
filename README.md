@@ -1,5 +1,8 @@
 # Backend for KeyboardClickSpeedPerson Site
 
+Frontend Repo
+- https://github.com/Thomas-Le/keyboardclickspeedperson
+
 - Account functionality (register, login, logout, etc.)
 - Account information stored in MySQL database (hashed passwords)
 - Cookie sessions stored in Redis
